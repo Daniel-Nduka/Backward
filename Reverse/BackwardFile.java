@@ -2,19 +2,34 @@
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+
 import java.io.BufferedWriter;
 
 public class BackwardFile {
     public static void main(String[] args) {
     	
+    	
     	//Create an array of 1000 
         char[] charArray = new char[1000];
         int wordCount = 0;
+        
+        boolean useJFileChooser = false;
 
         try {
-        	//read into the txt file
-            FileReader fr = new FileReader("/Users/ndukaofoeyeno/Downloads/backwards.txt");
+        	FileReader fr = null;
+        	if(useJFileChooser) {
+        		JFileChooser fileChooser = new JFileChooser();
+        		int returnVal = fileChooser.showOpenDialog(new JFrame());
+        		fr = new FileReader(fileChooser.getSelectedFile());
+        	}
+        	else {
+        		fr = new FileReader("/Users/ndukaofoeyeno/Downloads/backwards.txt");
+        	}
             int character;
+
             
             //use an loop to read every character 
             while (true) {
