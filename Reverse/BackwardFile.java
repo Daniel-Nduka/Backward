@@ -7,17 +7,19 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
 import java.io.BufferedWriter;
+import java.util.Scanner;
 
 public class BackwardFile {
     public static void main(String[] args) {
     	
-    	
+    	System.out.println("Choose a txt file from the down menu");
+    	Scanner s = new Scanner (System.in);
     	//Create an array of 1000 
         char[] charArray = new char[1000];
         int wordCount = 0;
         
-        boolean useJFileChooser = false;
-
+        boolean useJFileChooser = true;
+        
         try {
         	FileReader fr = null;
         	if(useJFileChooser) {
@@ -26,7 +28,9 @@ public class BackwardFile {
         		fr = new FileReader(fileChooser.getSelectedFile());
         	}
         	else {
-        		fr = new FileReader("/Users/ndukaofoeyeno/Downloads/backwards.txt");
+        		System.out.println("Alternatively, copy and past the location of your file here ");
+        		String txt = s.nextLine();
+        		fr = new FileReader(txt);
         	}
             int character;
 
