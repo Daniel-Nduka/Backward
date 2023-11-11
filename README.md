@@ -46,10 +46,3 @@ Contributions are welcome! Feel free to open an issue or create a pull request.
 
 [Nduka Ofoeyeno](https://github.com/ndukaof)
 
-## Acknowledgments
-
-- Special thanks to [OpenAI](https://www.openai.com/) for the GPT-3.5 model that assisted in creating this README.
-
----
-
-Feel free to customize the README according to your preferences and the specific details of your project.
